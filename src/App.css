@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.inp{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.btn{
+  width: 177px;
+  background-color: #757575;
+  border-radius: 8px;
+  transition: all, 0.2s;
+}
+.btn:hover{
+  transition: all, 0.2s;
+  background-color: #c9c9c9;
+}

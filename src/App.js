@@ -1,22 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [password, setPassword] = useState('');
+
+  const handleChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleClick = () => {
+    if (password === '32645') {
+      alert('Правильно бро');
+    } else {
+      alert('Неправильный пароль');
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Приветствую</h1>
+        <p>Введите пароль</p>
+        <input
+          type="password"
+          className="inp"
+          value={password}
+          onChange={handleChange}
+        />
+        <button className="btn" onClick={handleClick}>Accept</button>
       </header>
     </div>
   );
